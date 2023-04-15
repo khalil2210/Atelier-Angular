@@ -1,0 +1,23 @@
+<h3>{{titre}}</h3>
+<form class="form-group">
+  <div class="row d-flex align-items-center">
+    <div class="col-md-8">
+      <input name="input" [(ngModel)]="listlength" class="form-control mx-3" type="input" [value]="listlength" >
+    </div>
+    <div class="col-md-2" >items: {{ listlength }}</div>
+  </div>
+</form>
+<div *ngFor="let article of listeArticles">
+<!-- <div *ngIf="article.categorie!='Travail'"> -->
+    <div class="card m-3 " style="width: 40%;" [ngStyle]="{'background-color':article.categorie=='Education'?'rgba(113, 182, 209, 0.562)':null}">
+      <div class="card-body">
+        <h5 class="card-title">{{article.titre}}</h5>
+        <h6 class="card-subtitle mb-2 text-body-secondary"><b>Auteur: </b> {{article.auteur}}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary"> <b>Date: </b>{{article.date}}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary"> <b>Contenu :</b>{{article.contenu}}</h6>
+        <h6 class="card-subtitle mb-2 text-body-secondary"> <b>Categorie :</b>{{article.categorie}}</h6>
+          </div>
+      <!-- </div> -->
+    </div>
+
+

@@ -1,0 +1,33 @@
+<div class="d-flex flex-column align-items-center">
+<h3 >Our Offers</h3>
+<button class="btn" (click)="calcBilant()">Bilan</button>
+<h5>{{bilan}}</h5>
+<div class="form-inline">
+<input [(ngModel)]="value" type="search" class="form-control" placeholder="Search By Entreprise">
+</div>
+</div>
+<form class="form-group">
+  <div class="row d-flex align-items-center">
+    <div class="col-md-8">
+      <input class="form-control mx-3" type="input" [value]="">
+    </div>
+    <div class="col-md-2" >items :</div>
+  </div>
+</form>
+<div *ngFor="let emploi of listEmploi">
+  <div *ngIf="emploi.entreprise.startsWith(value) || !value">
+  <div class="card m-3 " style="width: 40%;">
+    <div class="card-body">
+      <h5 class="card-title">{{emploi.titre}}</h5>
+      <h6 class="card-subtitle mb-2 text-body-secondary">Entreprise : {{emploi.entreprise}}</h6>
+      <div class="m-1" >
+        <button type="button" class="btn btn-success m-1" [disabled]="!emploi.etat">Postuler</button>
+        </div>
+        </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
