@@ -1,4 +1,4 @@
-<h3>{{titre}}</h3>
+<h3 class="pt-5">{{titre}}</h3>
 <form class="form-group">
   <div class="row d-flex align-items-center">
     <div class="col-md-8">
@@ -7,7 +7,7 @@
     <div class="col-md-2" >items: {{ listlength }}</div>
   </div>
 </form>
-<div *ngFor="let article of listeArticles">
+<div *ngFor="let article of listeArticles | slice:0:listlength">
 <!-- <div *ngIf="article.categorie!='Travail'"> -->
     <div class="card m-3 " style="width: 40%;" [ngStyle]="{'background-color':article.categorie=='Education'?'rgba(113, 182, 209, 0.562)':null}">
       <div class="card-body">

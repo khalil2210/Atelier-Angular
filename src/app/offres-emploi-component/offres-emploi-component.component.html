@@ -1,19 +1,17 @@
-<div class="d-flex flex-column align-items-center">
-<h3 >Our Offers</h3>
-<button class="btn" (click)="calcBilant()">Bilan</button>
-<h5>{{bilan}}</h5>
-<div class="form-inline">
-<input [(ngModel)]="value" type="search" class="form-control" placeholder="Search By Entreprise">
-</div>
-</div>
+<h3 class="pt-5">Our Offers</h3>
 <form class="form-group">
   <div class="row d-flex align-items-center">
-    <div class="col-md-8">
-      <input class="form-control mx-3" type="input" [value]="">
+    <div class="col-md-6">
+      <input name="inputt"[(ngModel)]="value" type="search" class="form-control" placeholder="Search By Entreprise">
     </div>
-    <div class="col-md-2" >items :</div>
+    <div class="col-md-2"> <button class="btn btn-primary" (click)="calcBilant()">Get Bilan</button></div>
+    <div class="col-md-2" ><h5>{{bilan}}</h5></div>
   </div>
 </form>
+
+
+
+
 <div *ngFor="let emploi of listEmploi">
   <div *ngIf="emploi.entreprise.startsWith(value) || !value">
   <div class="card m-3 " style="width: 40%;">

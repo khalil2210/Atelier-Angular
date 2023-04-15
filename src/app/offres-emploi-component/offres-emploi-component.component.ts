@@ -13,13 +13,14 @@ export class OffresEmploiComponentComponent {
   bilan!:number;
   value!:string;
   listEmploi:Emploi[]=[
-    {reference: 'ref1', titre: 'Full Stack Dev', entreprise: 'Wevioo', etat: true},
-    {reference: 'ref2', titre: 'UI/UX Designer', entreprise: 'Value', etat: true},
-    {reference: 'ref3', titre: 'UI/UX Designer', entreprise: 'Google', etat: false},
-    {reference: 'ref4', titre: 'Software Engineer', entreprise: 'Sopra', etat: true},
-    {reference: 'ref5', titre: 'UI/UX Designer', entreprise: 'Expensya', etat: true},
-    {reference: 'ref6', titre: 'Cloud Architect', entreprise: 'Google', etat: false},
-    {reference: 'ref7', titre: 'Devops Engineer', entreprise: 'Sofrecom', etat: true},
+    {reference: 'ref1', titre: 'Full Stack Dev', entreprise: 'wevioo', etat: true},
+    {reference: 'ref2', titre: 'UI/UX Designer', entreprise: 'value', etat: true},
+    {reference: 'ref3', titre: 'UI/UX Designer', entreprise: 'vmware', etat: false},
+    {reference: 'ref4', titre: 'Full Stack Dev', entreprise: 'walmart', etat: false},
+    {reference: 'ref5', titre: 'Software Engineer', entreprise: 'sopra', etat: true},
+    {reference: 'ref6', titre: 'UI/UX Designer', entreprise: 'expensya', etat: true},
+    {reference: 'ref7', titre: 'Cloud Architect', entreprise: 'google', etat: false},
+    {reference: 'ref8', titre: 'Devops Engineer', entreprise: 'sofrecom', etat: true},
   ]
 
 
